@@ -154,9 +154,9 @@ export function GuidePage() {
               className="group block rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-zinc-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 aspect-[3/4] relative"
               style={{ minHeight: 0 }}
             >
-              <img
-                src={`/IITC%20Linkedin%20Photoshoot%20Ideas/${img}`}
-                alt={img}
+                                   <img
+                       src={`/photoshoot-ideas/${img}`}
+                       alt={img}
                 className="w-full h-full object-cover object-center transition-transform duration-200 group-hover:scale-105"
                 loading="lazy"
                 style={{ aspectRatio: '3/4', minHeight: 0 }}
@@ -208,9 +208,9 @@ export function GuidePage() {
                       </svg>
                     </div>
                   )}
-                  <img
-                    src={`/IITC%20Linkedin%20Photoshoot%20Ideas/${openImg}`}
-                    alt={openImg}
+                                           <img
+                           src={`/photoshoot-ideas/${openImg}`}
+                           alt={openImg}
                     className="max-h-[80vh] w-auto max-w-[98vw] rounded-xl shadow-2xl z-10"
                     style={{ display: imgLoaded ? 'block' : 'none' }}
                     onLoad={() => setImgLoaded(true)}
