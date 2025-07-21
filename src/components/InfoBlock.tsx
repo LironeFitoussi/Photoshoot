@@ -19,12 +19,14 @@ export function InfoBlock({ title, children, icon, className }: InfoBlockProps) 
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={className}
     >
-      <Alert className="bg-white text-black border border-zinc-100 shadow-lg rounded-xl">
-        <div className="flex items-center gap-2 mb-1">
+      <Alert className="bg-white text-zinc-900 border border-zinc-100 shadow-lg rounded-3xl px-6 py-6 flex flex-col items-center text-center">
+        <div className="flex items-center justify-center gap-2 mb-2">
           {icon}
-          {title && <Typography as="span" variant="h4" className="text-orange-600 font-bold">{title}</Typography>}
+          {title && <Typography as="span" variant="h3" className="font-bold text-zinc-900">{title}</Typography>}
         </div>
-        <Typography as="div" variant="muted" className="text-zinc-700 font-normal">{children}</Typography>
+        <Typography as="div" variant="p" className="text-zinc-900 text-base leading-relaxed">
+          {children}
+        </Typography>
       </Alert>
     </motion.div>
   )

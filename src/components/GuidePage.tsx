@@ -46,31 +46,28 @@ export function GuidePage() {
 
   return (
     <main className="w-full min-h-svh py-12 px-2 md:px-12 bg-white text-zinc-900" lang={i18n.language} dir={isHebrew ? 'rtl' : 'ltr'}>
-      <Typography variant="h1" className="mb-2 flex items-center gap-2">
-        <span role="img" aria-label="camera">📸</span> {t('guide.title')}
-      </Typography>
       <Typography variant="lead" className="mb-4">
         {t('guide.intro')}
       </Typography>
       <div className="w-full max-w-6xl mx-auto">
         <GuideSection title={t('guide.whatToWear')} icon={<FaShirt className="w-6 h-6 text-blue-500" />}>
-          <Typography variant="lead" className="mb-2">Your attire plays a crucial role in setting the professional tone of your photos. Here's what we recommend:</Typography>
+          <Typography variant="lead" className="mb-2">{t('guide.introWhatToWear')}</Typography>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div>
-              <Badge className="mb-2">For Men</Badge>
+              <Badge className="mb-2">{t('guide.whatToWearMen')}</Badge>
               <InfoList
                 items={[
-                  { text: <><b>Shirt:</b> Long-sleeved, button-down in solid blue, gray, or pastel. Looks professional. <span role="img" aria-label="shirt">👔</span></>, icon: <AiOutlineUser className="w-4 h-4" /> },
-                  { text: <><b>OPTIONAL: Blazer/Jacket:</b> Well-fitted, neutral color (black, navy, gray) for elevated look. <span role="img" aria-label="jacket">🧥</span></>, icon: <FaStar className="w-4 h-4" /> },
+                  { text: t('guide.menShirt'), icon: <AiOutlineUser className="w-4 h-4" /> },
+                  { text: t('guide.menBlazer'), icon: <FaStar className="w-4 h-4" /> },
                 ]}
               />
             </div>
             <div>
-              <Badge className="mb-2">For Women</Badge>
+              <Badge className="mb-2">{t('guide.whatToWearWomen')}</Badge>
               <InfoList
                 items={[
-                  { text: <><b>Top:</b> Professional blouse or business suit in solid, neutral colors. Avoid busy patterns. <span role="img" aria-label="blouse">👗</span></>, icon: <AiOutlineUser className="w-4 h-4" /> },
-                  { text: <><b>OPTIONAL: Blazer/Jacket:</b> Tailored, neutral color (black, navy, beige) for formal touch. <span role="img" aria-label="jacket">🧥</span></>, icon: <FaStar className="w-4 h-4" /> },
+                  { text: t('guide.womenTop'), icon: <AiOutlineUser className="w-4 h-4" /> },
+                  { text: t('guide.womenBlazer'), icon: <FaStar className="w-4 h-4" /> },
                 ]}
               />
             </div>
@@ -78,28 +75,28 @@ export function GuidePage() {
         </GuideSection>
 
         <GuideSection title={t('guide.grooming')} icon={<AiOutlineSmile className="w-6 h-6 text-green-500" />}>
-          <Typography variant="lead" className="mb-2">Looking neat and tidy is just as important as what you wear.</Typography>
-          <Badge className="mb-2">General</Badge>
+          <Typography variant="lead" className="mb-2">{t('guide.introGrooming')}</Typography>
+          <Badge className="mb-2">{t('guide.groomingGeneral')}</Badge>
           <InfoList
             items={[
-              { text: <><b>Hair:</b> Clean, dry, and styled neatly. <span role="img" aria-label="hair">💇‍♂️💇‍♀️</span></>, icon: <FaStar className="w-4 h-4" /> },
-              { text: <><b>Nails:</b> Clean, trimmed nails. <span role="img" aria-label="nails">💅</span></>, icon: <AiOutlineCheckCircle className="w-4 h-4" /> },
+              { text: t('guide.groomingHair'), icon: <FaStar className="w-4 h-4" /> },
+              { text: t('guide.groomingNails'), icon: <AiOutlineCheckCircle className="w-4 h-4" /> },
             ]}
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-4">
             <div>
-              <Badge className="mb-2">For Men</Badge>
+              <Badge className="mb-2">{t('guide.groomingMen')}</Badge>
               <InfoList
                 items={[
-                  { text: <><b>Facial Hair:</b> Neatly trimmed. If you shave, do so the morning of the shoot. <span role="img" aria-label="beard">🧔</span></>, icon: <AiOutlineUser className="w-4 h-4" /> },
+                  { text: t('guide.groomingFacial'), icon: <AiOutlineUser className="w-4 h-4" /> },
                 ]}
               />
             </div>
             <div>
-              <Badge className="mb-2">For Women</Badge>
+              <Badge className="mb-2">{t('guide.groomingWomen')}</Badge>
               <InfoList
                 items={[
-                  { text: <><b>Makeup:</b> Light, natural-looking. Foundation, mascara, subtle lip color. <span role="img" aria-label="makeup">💄</span></>, icon: <FaStar className="w-4 h-4" /> },
+                  { text: t('guide.groomingMakeup'), icon: <FaStar className="w-4 h-4" /> },
                 ]}
               />
             </div>
@@ -107,33 +104,33 @@ export function GuidePage() {
         </GuideSection>
 
         <GuideSection title={t('guide.accessories')} icon={<FaStar className="w-6 h-6 text-yellow-500" />}>
-          <Typography variant="lead" className="mb-2">Keep accessories to a minimum to maintain focus on your face and expression.</Typography>
+          <Typography variant="lead" className="mb-2">{t('guide.introAccessories')}</Typography>
           <InfoList
             items={[
-              { text: <><b>Jewelry:</b> Simple and understated. Small earrings or a modest necklace. <span role="img" aria-label="jewelry">💍</span></>, icon: <FaStar className="w-4 h-4" /> },
-              { text: <><b>Watches:</b> Sleek and professional styles. <span role="img" aria-label="watch">⌚</span></>, icon: <AiOutlineClockCircle className="w-4 h-4" /> },
+              { text: t('guide.accessoriesJewelry'), icon: <FaStar className="w-4 h-4" /> },
+              { text: t('guide.accessoriesWatches'), icon: <AiOutlineClockCircle className="w-4 h-4" /> },
             ]}
           />
         </GuideSection>
 
         <GuideSection title={t('guide.dayBefore')} icon={<FaSun className="w-6 h-6 text-orange-500" />}>
-          <Typography variant="lead" className="mb-2">Prepare the day before to avoid any last-minute issues.</Typography>
+          <Typography variant="lead" className="mb-2">{t('guide.introDayBefore')}</Typography>
           <InfoList
             items={[
-              { text: <><b>Iron Your Clothes:</b> Make sure your outfit is ironed and hanging up the night before. <span role="img" aria-label="iron">👕</span></>, icon: <FaShirt className="w-4 h-4" /> },
-              { text: <><b>Rest:</b> Aim for a full night's sleep. <span role="img" aria-label="sleep">😴</span></>, icon: <FaMoon className="w-4 h-4" /> },
-              { text: <><b>Hydrate:</b> Drink plenty of water for clear, hydrated skin. <span role="img" aria-label="water">💧</span></>, icon: <FaGlassWater className="w-4 h-4" /> },
+              { text: t('guide.dayBeforeIron'), icon: <FaShirt className="w-4 h-4" /> },
+              { text: t('guide.dayBeforeRest'), icon: <FaMoon className="w-4 h-4" /> },
+              { text: t('guide.dayBeforeHydrate'), icon: <FaGlassWater className="w-4 h-4" /> },
             ]}
           />
         </GuideSection>
 
         <GuideSection title={t('guide.dayOf')} icon={<AiOutlineSmile className="w-6 h-6 text-pink-500" />}>
-          <Typography variant="lead" className="mb-2">Final tips for the day of your photoshoot.</Typography>
+          <Typography variant="lead" className="mb-2">{t('guide.introDayOf')}</Typography>
           <InfoList
             items={[
-              { text: <><b>Arrive Early:</b> Come in at least 10-15 minutes early. <span role="img" aria-label="clock">⏰</span></>, icon: <AiOutlineClockCircle className="w-4 h-4" /> },
-              { text: <><b>Bring Options:</b> Bring a couple of different tops if unsure. <span role="img" aria-label="options">👗</span></>, icon: <FaChevronRight className="w-4 h-4" /> },
-              { text: <><b>Relax and Smile:</b> Be yourself! A natural smile is more engaging. <span role="img" aria-label="smile">😊</span></>, icon: <AiOutlineSmile className="w-4 h-4" /> },
+              { text: t('guide.dayOfArrive'), icon: <AiOutlineClockCircle className="w-4 h-4" /> },
+              { text: t('guide.dayOfOptions'), icon: <FaChevronRight className="w-4 h-4" /> },
+              { text: t('guide.dayOfSmile'), icon: <AiOutlineSmile className="w-4 h-4" /> },
             ]}
           />
         </GuideSection>
@@ -143,7 +140,7 @@ export function GuidePage() {
           icon={<AiOutlineAlert className="w-5 h-5 text-red-500" />}
           className="mt-8"
         >
-          We want you to not only look great but also feel great in your photos. These images represent <b>your</b> professional brand. We’re looking forward to seeing you all shine! See you at the shoot! <span role="img" aria-label="wave">👋</span>
+          {t('guide.rememberText')}
         </InfoBlock>
       </div>
       <Typography variant="h2" className="mb-2 mt-8">{t('guide.ideas')}</Typography>
@@ -165,7 +162,7 @@ export function GuidePage() {
                 style={{ aspectRatio: '3/4', minHeight: 0 }}
               />
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/30">
-                <span className="text-white font-semibold text-xs">Click to enlarge</span>
+                <span className="text-white font-semibold text-xs">{t('guide.galleryOverlay')}</span>
               </div>
             </button>
           ))}
@@ -176,7 +173,7 @@ export function GuidePage() {
               className="px-4 py-2 rounded-full bg-blue-600 text-white font-semibold shadow hover:bg-blue-700 transition"
               onClick={() => setShowAll(true)}
             >
-              Show more
+              {t('guide.showMore')}
             </button>
           </div>
         )}
