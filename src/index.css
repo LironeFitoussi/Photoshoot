@@ -1,5 +1,14 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@400;700&family=Heebo:wght@400;700&family=Noto+Sans+Hebrew:wght@400;700&display=swap');
+
+html[lang="he"], body[lang="he"] {
+  font-family: 'Heebo', 'Assistant', 'Noto Sans Hebrew', Arial, sans-serif;
+}
+
+html, body {
+  font-family: system-ui, Arial, sans-serif;
+}
 
 @custom-variant dark (&:is(.dark *));
 
